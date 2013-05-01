@@ -139,7 +139,16 @@
     }
 
     // good
-    itemsCopy = Array.prototype.slice.call(items);
+    itemsCopy = items.slice();
+    ```
+
+  - To convert an array-like object to an array, use Array#slice.
+
+    ```javascript
+    function trigger() {
+      var args = Array.prototype.slice.call(arguments);
+      ...
+    }
     ```
 
     **[[⬆]](#TOC)**
@@ -667,6 +676,32 @@
       return type;
     }
     ```
+
+  - Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME -- need to figure this out` or `TODO -- need to implement`.
+
+  - Use `// FIXME:` to annotate problems
+
+    ```javascript
+    function Calculator() {
+
+      // FIXME: shouldn't use a global here
+      total = 0;
+
+      return this;
+    }
+    ```
+
+  - Use `// TODO:` to annotate solutions to problems
+
+    ```javascript
+    function Calculator() {
+
+      // TODO: total should be configurable by an options param
+      this.total = 0;
+
+      return this;
+    }
+  ```
 
     **[[⬆]](#TOC)**
 
@@ -1223,7 +1258,7 @@
     }
     ```
 
-  - For DOM queries use Cascading `$('.sidebar ul')` or parent > child `$('.sidebar > .ul')`. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
+  - For DOM queries use Cascading `$('.sidebar ul')` or parent > child `$('.sidebar > ul')`. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
   - Use `find` with scoped jQuery object queries.
 
     ```javascript
@@ -1332,16 +1367,19 @@
 
   This is a list of organizations that are using this style guide. Send us a pull request or open an issue and we'll add you to the list.
 
-  - **Airbnb**: [airbnb/javascript](//github.com/airbnb/javascript)
-  - **American Insitutes for Research**: [AIRAST/javascript](//github.com/AIRAST/javascript)
-  - **ExactTarget**: [ExactTarget/javascript](//github.com/ExactTarget/javascript)
-  - **GoCardless**: [gocardless/javascript](//github.com/gocardless/javascript)
-  - **GoodData**: [gooddata/gdc-js-style](//github.com/gooddata/gdc-js-style)
-  - **How About We**: [howaboutwe/javascript](//github.com/howaboutwe/javascript)
-  - **MinnPost**: [MinnPost/javascript](//github.com/MinnPost/javascript)
+  - **Airbnb**: [airbnb/javascript](https://github.com/airbnb/javascript)
+  - **American Insitutes for Research**: [AIRAST/javascript](https://github.com/AIRAST/javascript)
+  - **ExactTarget**: [ExactTarget/javascript](https://github.com/ExactTarget/javascript)
+  - **GeneralElectric**: [GeneralElectric/javascript](https://github.com/GeneralElectric/javascript)
+  - **GoodData**: [gooddata/gdc-js-style](https://github.com/gooddata/gdc-js-style)
+  - **How About We**: [howaboutwe/javascript](https://github.com/howaboutwe/javascript)
+  - **MinnPost**: [MinnPost/javascript](https://github.com/MinnPost/javascript)
+  - **ModCloth**: [modcloth/javascript](https://github.com/modcloth/javascript)
   - **National Geographic**: [natgeo/javascript](https://github.com/natgeo/javascript)
-  - **Razorfish**: [razorfish/javascript-style-guide](//github.com/razorfish/javascript-style-guide)
-  - **Shutterfly**: [shutterfly/javascript](//github.com/shutterfly/javascript)
+  - **Razorfish**: [razorfish/javascript-style-guide](https://github.com/razorfish/javascript-style-guide)
+  - **Shutterfly**: [shutterfly/javascript](https://github.com/shutterfly/javascript)
+  - **Userify**: [userify/javascript](https://github.com/userify/javascript)
+  - **Zillow**: [zillow/javascript](https://github.com/zillow/javascript)
 
 ## <a name='translation'>Translation</a>
 
@@ -1349,10 +1387,11 @@
 
   - :de: **German**: [timofurrer/javascript-style-guide](https://github.com/timofurrer/javascript-style-guide)
   - :jp: **Japanese**: [mitsuruog/javacript-style-guide](https://github.com/mitsuruog/javacript-style-guide)
+  - :br: **Portuguese**: [armoucar/javascript-style-guide](https://github.com/armoucar/javascript-style-guide)
 
 ## <a name='guide-guide'>The JavaScript Style Guide Guide</a>
 
-  - [Reference](//github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
+  - [Reference](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
 
 ## <a name='authors'>Contributors</a>
 
